@@ -15,6 +15,11 @@ desc 'migrate changes to your database'
   task :migrate => :environment do
     Student.create_table
   end
+
+desc 'seed some dummy data to db'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
 end
 
 task :environment do
